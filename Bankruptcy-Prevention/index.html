@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bankruptcy Prediction</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    
+    <div class="container mt-5">
+        <div class="card mx-auto" style="max-width: 600px;">
+            <div class="card-header bg-primary text-white text-center">
+                <h3>Bankruptcy Prediction</h3>
+            </div>
+            <div class="card-body">
+                <form action="/predict" method="POST">
+                    <div class="mb-3">
+                        <label for="industrial_risk" class="form-label">Industrial Risk</label>
+                        <select class="form-select" id="industrial_risk" name="industrial_risk" required>
+                            <option value="" disabled selected>Select Risk Level</option>
+                            <option value="0">Low (0)</option>
+                            <option value="0.5">Moderate (0.5)</option>
+                            <option value="1">High (1)</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="management_risk" class="form-label">Management Risk</label>
+                        <select class="form-select" id="management_risk" name="management_risk" required>
+                            <option value="" disabled selected>Select Risk Level</option>
+                            <option value="0">Low (0)</option>
+                            <option value="0.5">Moderate (0.5)</option>
+                            <option value="1">High (1)</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="financial_flexibility" class="form-label">Financial Flexibility</label>
+                        <select class="form-select" id="financial_flexibility" name="financial_flexibility" required>
+                            <option value="" disabled selected>Select Flexibility Level</option>
+                            <option value="0">Low (0)</option>
+                            <option value="0.5">Moderate (0.5)</option>
+                            <option value="1">High (1)</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="credibility" class="form-label">Credibility</label>
+                        <select class="form-select" id="credibility" name="credibility" required>
+                            <option value="" disabled selected>Select Credibility Level</option>
+                            <option value="0">Low (0)</option>
+                            <option value="0.5">Moderate (0.5)</option>
+                            <option value="1">High (1)</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="competitiveness" class="form-label">Competitiveness</label>
+                        <select class="form-select" id="competitiveness" name="competitiveness" required>
+                            <option value="" disabled selected>Select Competitiveness Level</option>
+                            <option value="0">Low (0)</option>
+                            <option value="0.5">Moderate (0.5)</option>
+                            <option value="1">High (1)</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="operating_risk" class="form-label">Operating Risk</label>
+                        <select class="form-select" id="operating_risk" name="operating_risk" required>
+                            <option value="" disabled selected>Select Risk Level</option>
+                            <option value="0">Low (0)</option>
+                            <option value="0.5">Moderate (0.5)</option>
+                            <option value="1">High (1)</option>
+                        </select>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success">Predict</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
