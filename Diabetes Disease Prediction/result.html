@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <p><strong>Your Input:</strong></p>
+        <ul>
+            {% for key, value in input_data.items() %}
+                <li>{{ key }}: {{ value }}</li>
+            {% endfor %}
+        </ul>
+        <p><strong>Prediction:</strong> {{ prediction }}</p>
+        <button onclick="window.location.href='/'">Make Another Prediction</button>
+    </div>
+</body>
+</html>
